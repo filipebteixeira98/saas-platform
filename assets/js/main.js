@@ -39,3 +39,15 @@ function scrollActive() {
 }
 
 window.addEventListener('scroll', scrollActive)
+
+function scrollHeader() {
+  const headerElement = document.getElementById('header')
+
+  if (this.scrollY >= 80) {
+    headerElement.classList.add('scroll-header')
+  } else {
+    headerElement.classList.remove('scroll-header')
+  }
+}
+
+window.addEventListener('scroll', scrollHeader)
