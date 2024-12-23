@@ -1,4 +1,4 @@
-const showMenu = (toggleId, navId) => {
+const handleShowMenu = (toggleId, navId) => {
   const toggleElement = document.getElementById(toggleId), navElement = document.getElementById(navId);
 
   if (toggleElement && navElement) {
@@ -8,7 +8,7 @@ const showMenu = (toggleId, navId) => {
   }
 }
 
-showMenu('nav-toggle', 'nav-menu')
+handleShowMenu('nav-toggle', 'nav-menu')
 
 const navLinksElements = document.querySelectorAll('.nav__link')
 
@@ -22,7 +22,7 @@ navLinksElements.forEach(navLink => navLink.addEventListener('click', handleTogg
 
 const sections = document.querySelectorAll('section[id]')
 
-function scrollActive() {
+function handleScrollActive() {
   const scrollY = window.pageYOffset
 
   sections.forEach(current => {
@@ -38,9 +38,9 @@ function scrollActive() {
   })
 }
 
-window.addEventListener('scroll', scrollActive)
+window.addEventListener('scroll', handleScrollActive)
 
-function scrollHeader() {
+function handleScrollHeader() {
   const headerElement = document.getElementById('header')
 
   if (this.scrollY >= 80) {
@@ -50,4 +50,16 @@ function scrollHeader() {
   }
 }
 
-window.addEventListener('scroll', scrollHeader)
+window.addEventListener('scroll', handleScrollHeader)
+
+function handleScrollUp() {
+  const scrollUp = document.getElementById('scroll-up')
+
+  if (this.scrollY >= 560) {
+    scrollUp.classList.add('show-scroll')
+  } else {
+    scrollUp.classList.remove('show-scroll')
+  }
+}
+
+window.addEventListener('scroll', handleScrollUp)
