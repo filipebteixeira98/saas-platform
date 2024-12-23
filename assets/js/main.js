@@ -9,3 +9,13 @@ const showMenu = (toggleId, navId) => {
 }
 
 showMenu('nav-toggle', 'nav-menu')
+
+const navLinksElements = document.querySelectorAll('.nav__link')
+
+function handleToggleMenuWithNavLinks() {
+  const navMenuElement = document.getElementById('nav-menu')
+
+  navMenuElement.classList.remove('show-menu')
+}
+
+navLinksElements.forEach((navLink) => navLink.addEventListener('click', handleToggleMenuWithNavLinks))
