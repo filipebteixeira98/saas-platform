@@ -238,6 +238,22 @@ img {
   background-color: transparent;
 }
 
+.button-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.25rem;
+          column-gap: 0.25rem;
+  padding: 0.75rem 1rem;
+}
+
+.button__icon {
+  font-size: 1.5rem;
+}
+
 .about__container {
   gap: 2.5rem;
 }
@@ -275,5 +291,29 @@ img {
   -ms-grid-column-align: center;
       justify-self: center;
   margin-bottom: var(--mb-0-5);
+}
+
+.app__container {
+  gap: 2.5rem;
+}
+
+.app__data {
+  text-align: center;
+}
+
+.app__description {
+  margin-bottom: var(--mb-1-5);
+}
+
+.app__buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (max-content)[2];
+      grid-template-columns: repeat(2, -webkit-max-content);
+      grid-template-columns: repeat(2, max-content);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
 }
 /*# sourceMappingURL=styles.css.map */
